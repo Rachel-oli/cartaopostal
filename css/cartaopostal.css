@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: bisque;
+}
+
+.aviso h2 {
+   font-family: Georgia, serif;
+}
+
+.flexionando {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card {
+    height: 323px;
+    width: 500px;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.flip-card:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    transform-style: preserve-3d;
+    transition: transform 3s;
+}
+
+.card-front,
+.card-back {
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornsilk;
+    height: 323px;
+    width: 500px;
+    transform: rotateY(180deg);
+}
+
+.card-back p {
+    padding: 10px;
+}
